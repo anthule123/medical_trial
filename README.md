@@ -27,10 +27,14 @@ const like = 'sample';
  # 0. debug và test các class này, từ dễ đến khó (1->3).
     0. Xem cách tạo và debug project dart ở
   [](https://www.youtube.com/watch?v=H-QKneVNOhE&t=536s)
+  
     1. Xem về cách test ở 
   [](https://www.youtube.com/watch?v=cVru6Gy4duQ&list=PLptHs0ZDJKt_T-oNj_6Q98v-tBnVf-S_o&index=6 )
+  
     2. Các class đều kế thừa từ class Equatable.
+    
     3. print class thì viết hàm đè toString()   
    [](https://coflutter.com/dart-how-to-print-an-object/)
+   
     4. runtimetype thì sẽ là tên class.
    
