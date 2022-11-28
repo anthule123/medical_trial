@@ -31,7 +31,7 @@ const like = 'sample';
     1. Xem về cách test ở 
   [how to test](https://www.youtube.com/watch?v=cVru6Gy4duQ&list=PLptHs0ZDJKt_T-oNj_6Q98v-tBnVf-S_o&index=6 )
   
-    2. Các class đều kế thừa từ class Equatable.
+    2. Các class đều kế thừa từ class Equatable để check ==.
     
     3. print class thì viết hàm đè toString()   
    [https://coflutter.com/dart-how-to-print-an-object/]
