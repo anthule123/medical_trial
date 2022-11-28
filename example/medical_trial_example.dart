@@ -42,14 +42,15 @@ void main2() {
 }
 
 void main() {
-  Regimen exam = Regimen();
+  Regimen exam = Regimen(currentInsulin: 10);
   DateTime timeset = DateTime.now();
   MedicalCheckGlucose c = MedicalCheckGlucose(time: timeset, glucoseUI: 12);
   exam.addMedicalAction(c);
   print(c);
-  print(exam.medicalActions[0]);
+  print(exam.medicalActions?[0]);
   dynamic timeA = DateTime(1999);
   dynamic d = MedicalAction(time: timeA);
   print(d.runtimeType);
   print(d);
+  
 }

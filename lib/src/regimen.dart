@@ -1,26 +1,37 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:equatable/equatable.dart';
+
+import 'package:medical_trial/src/medical_action.dart';
 import 'package:medical_trial/src/medical_check_glucose.dart';
+import 'package:medical_trial/src/medical_take_insulin.dart';
 
 class Regimen extends Equatable {
-  List<dynamic> medicalActions = [];
-  List<dynamic> medicalCheckGlucoses = [];
-  List<dynamic> medicalTakeInsulins = [];
+  double? currentInsulin = 5;
+  List<dynamic>? medicalActions = <dynamic>[];
+  List<MedicalCheckGlucose>? medicalCheckGlucoses = [];
+  List<MedicalTakeInsulin>? medicalTakeInsulins = [];
+  Regimen({
+    this.currentInsulin,
+    this.medicalActions,
+    this.medicalCheckGlucoses,
+    this.medicalTakeInsulins,
+  });
 
   void addMedicalAction(dynamic medicalAction) {
-    medicalActions.add(medicalAction);
-    if (medicalActions.runtimeType == MedicalCheckGlucose) {
+    medicalActions?.add(medicalAction);
+    if (medicalAction.runtimeType == MedicalCheckGlucose) {
       addMedicalCheckGlucose(medicalAction);
-    } else if (medicalActions.runtimeType == MedicalCheckGlucose) {
+    } else if (medicalAction.runtimeType == MedicalCheckGlucose) {
       addMedicalTakeInsulin(medicalAction);
     }
   }
 
   void addMedicalCheckGlucose(MedicalCheckGlucose medicalCheckGlucose) {
-    medicalCheckGlucoses.add(medicalCheckGlucose);
+    medicalCheckGlucoses?.add(medicalCheckGlucose);
   }
 
   void addMedicalTakeInsulin(dynamic medicalTakeInsulin) {
-    medicalTakeInsulins.add(medicalTakeInsulin);
+    medicalTakeInsulins?.add(medicalTakeInsulin);
   }
 
   @override
@@ -28,7 +39,6 @@ class Regimen extends Equatable {
         this.medicalActions,
         this.medicalCheckGlucoses,
         this.medicalTakeInsulins,
+        this.currentInsulin,
       ];
 }
-
-class RegimentType2NoInsulin extends Regimen {}

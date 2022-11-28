@@ -5,8 +5,5 @@ class MedicalCheckGlucose extends MedicalAction {
   MedicalCheckGlucose({required super.time, required glucoseUI});
   @override
   List<Object?> get props => [this.time, this.glucoseUI];
-  @override 
-  String toString(){
-    
-  }
+  
 }
