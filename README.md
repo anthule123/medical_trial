@@ -34,6 +34,13 @@ const like = 'sample';
 
 ## Additional information
 
+#Xây dựng các class cho việc điều trị cho bệnh nhân theo kiểu bottom up.
+
+##1. class MedicalAction:
+    - ý nghĩa: là hoạt động y tế, có thể là kiểm tra đường máu, hoặc tiêm,...
+    - có attribute là time
+
+
 TODO: Tell users more about the package: where to find more information, how to 
 contribute to the package, how to file issues, what response they can expect 
 from the package authors, and more.
