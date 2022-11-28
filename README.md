@@ -39,6 +39,15 @@ const like = 'sample';
 ## 1. class MedicalAction:
     - ý nghĩa: là hoạt động y tế, có thể là kiểm tra đường máu, hoặc tiêm,...
     - có attribute là time
+    Có 2 class kế thừa từ class này là class kiểm tra đường máu, và class tiêm insulin
+   ### 1.1. class MedicalCheckInsulin
+       - Có attribute là glucoseUI : lượng glucose đo được.
+   ### 1.2. class MedicalTakeInsulin
+       - Có attribute là loại Insulin tiêm vào: 1 trong 3 loại: Actrapid, Glagrine, NPH, có thể 
+         để type là String ở database và để là enum ở dart.
+       - Có attribute là lượng Insulin tiêm vào.
+ ## 2. class Regimen
+   
 
 
 TODO: Tell users more about the package: where to find more information, how to 
