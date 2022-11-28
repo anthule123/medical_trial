@@ -42,3 +42,6 @@ const like = 'sample';
  # 4. Kết quả debug
     Cho dấu hỏi vào trước các biến nullable để ko xảy ra lỗi.
    
+   
+Thôi chắc phải học (lại) dart ở  
+[https://www.youtube.com/playlist?list=PLptHs0ZDJKt_fLp8ImPQVc1obUJKDSQL7]
