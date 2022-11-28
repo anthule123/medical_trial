@@ -37,4 +37,8 @@ const like = 'sample';
    [https://coflutter.com/dart-how-to-print-an-object/]
    
     4. runtimetype thì sẽ là tên class.
+    
+    
+ #4. Kết quả debug
+    Cho dấu hỏi vào trước các biến nullable để ko xảy ra lỗi.
    
