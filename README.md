@@ -8,7 +8,7 @@ const like = 'sample';
     - có attribute là time.
     - time có cấu trúc dữ liệu là DataTime ở Dart và String ở database.
     Có 2 class kế thừa từ class này là class kiểm tra đường máu, và class tiêm insulin
-   ### 1.1. class MedicalCheckInsulin
+   ### 1.1. class MedicalCheckGlucose
        - Có thêm attribute là glucoseUI : lượng glucose đo được.
    ### 1.2. class MedicalTakeInsulin
        - Có thêm attribute là loại Insulin tiêm vào: 1 trong 3 loại: Actrapid, Glagrine, NPH, có thể 
