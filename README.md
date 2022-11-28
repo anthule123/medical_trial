@@ -36,7 +36,7 @@ const like = 'sample';
 
 #Xây dựng các class cho việc điều trị cho bệnh nhân theo kiểu bottom up.
 
-##1. class MedicalAction:
+## 1. class MedicalAction:
     - ý nghĩa: là hoạt động y tế, có thể là kiểm tra đường máu, hoặc tiêm,...
     - có attribute là time
 
