@@ -15,4 +15,9 @@ class MedicalAction extends Equatable {
   String toString() {
     return 'MedicalAction [time : ${this.time}]';
   }
+
+  MedicalAction clone() {
+    return MedicalAction(time: this.time);
+  }
 }
+
