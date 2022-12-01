@@ -47,8 +47,9 @@ const like = 'sample';
 Thôi chắc phải học (lại) dart ở  
 [https://www.youtube.com/playlist?list=PLptHs0ZDJKt_fLp8ImPQVc1obUJKDSQL7]
 # Update 1/12/22:
+   Đã test xong 2 class MedicalAction và MedicalCheckGlucose ở thư mục test.
   1. Nếu copy bình thường:
-        ```
+        ```dart
          MedicalAction a = MedicalAction(time: DateTime(2022));
          MedicalAction b = a;
         ``` 
