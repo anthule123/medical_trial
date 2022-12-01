@@ -33,6 +33,7 @@ const like = 'sample';
   
     2. Các class đều kế thừa từ class Equatable để check ==.
     
+    
     3. print class thì viết hàm đè toString()   
    [https://coflutter.com/dart-how-to-print-an-object/]
    
@@ -45,3 +46,11 @@ const like = 'sample';
    
 Thôi chắc phải học (lại) dart ở  
 [https://www.youtube.com/playlist?list=PLptHs0ZDJKt_fLp8ImPQVc1obUJKDSQL7]
+# Update 1/12/22:
+  1. Nếu copy bình thường:
+        ```
+         MedicalAction a = MedicalAction(time: DateTime(2022));
+         MedicalAction b = a;
+        ``` 
+    Thì sẽ bị copy luôn cả địa chỉ nên nếu giá trị b đổi thì a cũng đổi theo và ngược lại.
+    Ta phải tạo method clone để deepcopy.
