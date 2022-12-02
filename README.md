@@ -57,7 +57,7 @@ Thôi chắc phải học (lại) dart ở
     Ta phải tạo method clone để deepcopy.
   2. Copy 1 list gồm toàn các MedicalAction 
       Cách 1: 
-          ``` dart
+          ```dart
            MedicalAction a = MedicalAction(time: DateTime(2022));
            
            List<MedicalAction> r1 = [a.clone()];
