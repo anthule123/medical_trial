@@ -42,8 +42,16 @@ const like = 'sample';
     
  # 4. Kết quả debug
     Cho dấu hỏi vào trước các biến nullable để ko xảy ra lỗi.
-   
-   
+    Update 2/12/22:
+      - Loại bỏ dấu hỏi ? vì list của mình là [] thì cũng ko là null.
+      - khởi tạo dùng require 
+        ```dart 
+        Class Regimen{
+           List<dynamic> medicalActions; 
+           Regimen(
+             {required this.medicalActions,}
+           );
+         ```
 Thôi chắc phải học (lại) dart ở  
 [https://www.youtube.com/playlist?list=PLptHs0ZDJKt_fLp8ImPQVc1obUJKDSQL7]
 # Update 1/12/22:
