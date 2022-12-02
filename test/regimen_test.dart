@@ -26,7 +26,7 @@ void main() {
       Regimen reg2 = reg1;
       MedicalCheckGlucose glu1 = MedicalCheckGlucose(time: time, glucoseUI: 30);
 
-      reg2.medicalCheckGlucoses?.add(glu1);
+      reg2.medicalCheckGlucoses.add(glu1);
       expect(reg2, reg1);
     });
     test('test name', () {
@@ -58,8 +58,18 @@ void main() {
       );
       expect(reg1, reg5);
     });
-    test('test 6', () {
-      
+    test('test6', () {
+      List<MedicalCheckGlucose> a = [glu1.clone()];
+      List<MedicalCheckGlucose> b = [...a];
+      a[0].time = DateTime(2001);
+      expect(a, b);
     });
+    test('test7', () {
+      List<MedicalCheckGlucose> a = [glu1.clone()];
+      List<MedicalCheckGlucose> b = [for (MedicalCheckGlucose x in a) x.clone()];
+      a[0].time = DateTime(2001);
+      expect(a, b);
+    });
+    
   });
 }

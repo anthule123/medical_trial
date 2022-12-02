@@ -10,8 +10,8 @@ List<dynamic> dylist = [];
 class Regimen extends Equatable {
   double? currentInsulin = 5;
   List<dynamic> medicalActions;
-  List<MedicalCheckGlucose>? medicalCheckGlucoses;
-  List<MedicalTakeInsulin>? medicalTakeInsulins;
+  List<MedicalCheckGlucose> medicalCheckGlucoses;
+  List<MedicalTakeInsulin> medicalTakeInsulins;
 
   Regimen({
     this.currentInsulin = 5,
@@ -21,7 +21,7 @@ class Regimen extends Equatable {
   });
 
   void addMedicalAction(dynamic medicalAction) {
-    medicalActions?.add(medicalAction.clone());
+    medicalActions.add(medicalAction.clone());
     if (medicalAction.runtimeType == MedicalCheckGlucose) {
       addMedicalCheckGlucose(medicalAction);
     } else if (medicalAction.runtimeType == MedicalCheckGlucose) {
@@ -30,11 +30,11 @@ class Regimen extends Equatable {
   }
 
   void addMedicalCheckGlucose(MedicalCheckGlucose medicalCheckGlucose) {
-    medicalCheckGlucoses?.add(medicalCheckGlucose.clone());
+    medicalCheckGlucoses.add(medicalCheckGlucose.clone());
   }
 
   void addMedicalTakeInsulin(dynamic medicalTakeInsulin) {
-    medicalTakeInsulins?.add(medicalTakeInsulin.clone());
+    medicalTakeInsulins.add(medicalTakeInsulin.clone());
   }
 
   @override
@@ -46,21 +46,29 @@ class Regimen extends Equatable {
       ];
   Regimen clone() {
     return Regimen(
-      medicalActions: [...?medicalActions],
-      medicalCheckGlucoses: [...?medicalCheckGlucoses],
-      medicalTakeInsulins: [...?medicalTakeInsulins],
+      medicalActions: [for (dynamic x in medicalActions) x.clone()],
+      medicalCheckGlucoses: [for (MedicalCheckGlucose x in medicalCheckGlucoses) x.clone() ],
+      medicalTakeInsulins: [for (MedicalTakeInsulin x in medicalTakeInsulins) x.clone() ],
       currentInsulin: currentInsulin,
     );
   }
 }
 
+// Regimen InitialRegimen() {
+//   List medicalActions = <dynamic>[];
+//   List<MedicalCheckGlucose> medicalCheckGlucoses = <MedicalCheckGlucose>[];
+//   List<MedicalTakeInsulin> medicalTakeInsulins = <MedicalTakeInsulin>[];
+//   return Regimen(
+//     medicalActions: [...medicalActions],
+//     medicalCheckGlucoses: [...medicalCheckGlucoses],
+//     medicalTakeInsulins: [...medicalTakeInsulins],
+//   );
+// }
+
 Regimen InitialRegimen() {
-  List medicalActions = <dynamic>[];
-  List<MedicalCheckGlucose> medicalCheckGlucoses = <MedicalCheckGlucose>[];
-  List<MedicalTakeInsulin> medicalTakeInsulins = <MedicalTakeInsulin>[];
   return Regimen(
-    medicalActions: [...medicalActions],
-    medicalCheckGlucoses: [...medicalCheckGlucoses],
-    medicalTakeInsulins: [...medicalTakeInsulins],
+    medicalActions: [],
+    medicalCheckGlucoses: [],
+    medicalTakeInsulins: [],
   );
 }
