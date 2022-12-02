@@ -56,7 +56,8 @@ Thôi chắc phải học (lại) dart ở
     Thì sẽ bị copy luôn cả địa chỉ nên nếu giá trị b đổi thì a cũng đổi theo và ngược lại.
     Ta phải tạo method clone để deepcopy.
   2. Copy 1 list gồm toàn các MedicalAction 
-      Cách 1: 
+
+  Cách 1: 
 ```dart
            MedicalAction a = MedicalAction(time: DateTime(2022));
            List<MedicalAction> r1 = [a.clone()];
@@ -64,4 +65,24 @@ Thôi chắc phải học (lại) dart ở
 ``` 
          Cách này sẽ làm cho mọi thay đổi ở list r1 sẽ thay đổi trong r2 nên ko là deep copy.
          
+   Cách 2:
+   ```dart
+           MedicalAction a = MedicalAction(time: DateTime(2022));
+           List<MedicalAction> r1 = [a.clone()];
+           List<MedicalAction> r2 = [...r1];
+``` 
+          Cách này thì nếu ta thêm 1 phần tử mới vào r2 thì r1 sẽ giữ nguyên. 
+          
+           Nhưng nếu ta thay đổi phần tử r1[0] thì r2[0] sẽ thay đổi theo. 
+           
+           Nên đây vẫn chưa là deep copy.
+     Cách 2:
+```dart
+           MedicalAction a = MedicalAction(time: DateTime(2022));
+           List<MedicalAction> r1 = [a.clone()];
+           List<MedicalAction> r2 = [for (MedicalAction x in r1) x.clone()];
+``` 
+          Cách này sẽ đảm bảo rằng r1 và r2 độc lập với nhau. 
+          Nên cách 3 là deep copy.
+           
            
