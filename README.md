@@ -45,13 +45,14 @@ const like = 'sample';
     Update 2/12/22:
       - Loại bỏ dấu hỏi ? vì list của mình là [] thì cũng ko là null.
       - khởi tạo dùng require 
-        ```dart 
+      
+```dart 
         Class Regimen{
            List<dynamic> medicalActions; 
            Regimen(
              {required this.medicalActions,}
            );
-         ```
+ ```
 Thôi chắc phải học (lại) dart ở  
 [https://www.youtube.com/playlist?list=PLptHs0ZDJKt_fLp8ImPQVc1obUJKDSQL7]
 # Update 1/12/22:
