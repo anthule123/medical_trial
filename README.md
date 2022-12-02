@@ -75,8 +75,9 @@ Thôi chắc phải học (lại) dart ở
           
            Nhưng nếu ta thay đổi phần tử r1[0] thì r2[0] sẽ thay đổi theo. 
            
+           Cách này chỉ là deep copy nếu r1 là list gồm các int, String,...
            Nên đây vẫn chưa là deep copy.
-     Cách 2:
+   Cách 3 (deep copy):
 ```dart
            MedicalAction a = MedicalAction(time: DateTime(2022));
            List<MedicalAction> r1 = [a.clone()];
