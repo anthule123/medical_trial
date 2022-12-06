@@ -8,5 +8,9 @@ class MedicalCheckGlucose extends MedicalAction {
   MedicalCheckGlucose clone() {
     return MedicalCheckGlucose(time: time, glucoseUI: glucoseUI);
   }
-}
 
+  @override
+  String toString() {
+    return 'Tiêm ';
+  }
+}
