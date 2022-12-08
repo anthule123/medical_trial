@@ -35,6 +35,13 @@ void main() {
       c.time = DateTime(2010);
       expect(c, A);
     });
-    
+    test('print medical check glucose', () {
+      MedicalCheckGlucose medicalCheckGlucose =
+       MedicalCheckGlucose(
+        time: DateTime.now(),
+        glucoseUI: 100,
+      );
+      print(medicalCheckGlucose);
+    });
   });
 }

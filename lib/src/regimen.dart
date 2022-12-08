@@ -24,7 +24,7 @@ class Regimen extends Equatable {
     medicalActions.add(medicalAction.clone());
     if (medicalAction.runtimeType == MedicalCheckGlucose) {
       addMedicalCheckGlucose(medicalAction);
-    } else if (medicalAction.runtimeType == MedicalCheckGlucose) {
+    } else if (medicalAction.runtimeType == MedicalTakeInsulin) {
       addMedicalTakeInsulin(medicalAction);
     }
   }
@@ -33,8 +33,14 @@ class Regimen extends Equatable {
     medicalCheckGlucoses.add(medicalCheckGlucose.clone());
   }
 
-  void addMedicalTakeInsulin(dynamic medicalTakeInsulin) {
+  void addMedicalTakeInsulin(MedicalTakeInsulin medicalTakeInsulin) {
     medicalTakeInsulins.add(medicalTakeInsulin.clone());
+  }
+
+  @override
+  String toString() {
+    dynamic medicalActions_str = medicalActions.toString();
+    return 'Regimen ${medicalActions_str}';
   }
 
   @override
@@ -47,8 +53,12 @@ class Regimen extends Equatable {
   Regimen clone() {
     return Regimen(
       medicalActions: [for (dynamic x in medicalActions) x.clone()],
-      medicalCheckGlucoses: [for (MedicalCheckGlucose x in medicalCheckGlucoses) x.clone() ],
-      medicalTakeInsulins: [for (MedicalTakeInsulin x in medicalTakeInsulins) x.clone() ],
+      medicalCheckGlucoses: [
+        for (MedicalCheckGlucose x in medicalCheckGlucoses) x.clone()
+      ],
+      medicalTakeInsulins: [
+        for (MedicalTakeInsulin x in medicalTakeInsulins) x.clone()
+      ],
       currentInsulin: currentInsulin,
     );
   }

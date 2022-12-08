@@ -2,7 +2,10 @@ import 'package:medical_trial/src/medical_action.dart';
 
 class MedicalCheckGlucose extends MedicalAction {
   double glucoseUI = 0;
-  MedicalCheckGlucose({required super.time, required glucoseUI});
+  MedicalCheckGlucose({
+    required super.time,
+    required this.glucoseUI,
+     });
   @override
   List<Object?> get props => [this.time, this.glucoseUI];
   MedicalCheckGlucose clone() {
@@ -10,7 +13,8 @@ class MedicalCheckGlucose extends MedicalAction {
   }
 
   @override
+  @override
   String toString() {
-    return 'Tiêm ';
+    return '(${glucoseUI} glucose)';
   }
 }

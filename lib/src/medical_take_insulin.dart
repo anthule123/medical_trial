@@ -9,7 +9,7 @@ enum InsulinType {
 
 class MedicalTakeInsulin extends MedicalAction {
   InsulinType insulinType;
-  double insulinUI;
+  int insulinUI;
   MedicalTakeInsulin({
     required this.insulinType,
     required super.time,
@@ -23,5 +23,10 @@ class MedicalTakeInsulin extends MedicalAction {
       time: time,
       insulinUI: insulinUI,
     );
+  }
+
+  @override
+  String toString() {
+    return '(${this.insulinUI} ${this.insulinType})';
   }
 }
